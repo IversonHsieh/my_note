@@ -1,6 +1,17 @@
-> Thiss is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
+markdown example
+-------------------------
+- [Caching your GitHub password in Git] [S1-1]
+[S1-1]: https://help.github.com/articles/caching-your-github-password-in-git/#platform-linux
+
+
+    $ git config --global credential.helper cache
+    $ no code 
+
+-- setup username
+
+    $ git config --user
+    $ llll
+
+This is [an example](http://example.com/ "Title") inline link.
+
+[This link](http://example.net/) has no title attribute.
