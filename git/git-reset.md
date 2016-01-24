@@ -20,4 +20,3 @@ Does not touch the index file or the working tree at all (but resets the head to
     $ git reset --soft origin/master
 
 
-
