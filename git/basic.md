@@ -23,4 +23,3 @@ Git basic operation
 - push to remote
 
         $ git push
-
