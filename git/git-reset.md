@@ -1,6 +1,6 @@
 git reset operation
 -------------------------
-### git reset [<tree-ish>] <paths>...
+#### git reset [<tree-ish>] <paths>...
 
 This means that git reset <paths> is the opposite of git add <path>.
 
@@ -9,7 +9,7 @@ This means that git reset <paths> is the opposite of git add <path>.
     # Undo git-reset.md to untracking area
     $ git reset HEAD git-reset.md
 
-### git reset [<mode>] [<commit>]
+#### git reset [<mode>] [<commit>]
 
 Does not touch the index file or the working tree at all (but resets the head to <commit>)
 
