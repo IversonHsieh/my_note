@@ -6,4 +6,3 @@ ex : git clone https://github.com/IversonHsieh/my_note.git
 
 - push to remote
 $ git push 
-
