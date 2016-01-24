@@ -19,6 +19,7 @@ Git basic operation
 - [git pull is a convenient shortcut for completing both git fetch and git merge][git-clone]
 
         $ git pull [remotename branchname]
+        ex: git pull
 
 - push to remote
 
