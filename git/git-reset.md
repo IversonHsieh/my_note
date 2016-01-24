@@ -17,6 +17,8 @@ Does not touch the index file or the working tree at all (but resets the head to
     # We can see some files are put in staging area.
     $ git reset --soft HEAD~1
     # Undo the operation
-    $ git reset --soft origin/master
+    # Use `git reflog` to get which HEAD you want to undo
+    $ git reset HEAD@{1}
+    $ git reset [your hash number]
 
 
