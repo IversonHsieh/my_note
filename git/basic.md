@@ -16,11 +16,17 @@ Git basic operation
         $ git merge [remotename/branchname]
         ex: git merge
 
-- [git pull is a convenient shortcut for completing both git fetch and git merge][git-clone]
+- [git pull is a convenient shortcut for completing both `git fetch` and `git merge`][git-clone]
 
         $ git pull [remotename branchname]
         ex: git pull
 
-- push to remote
+- [push to a remote][git-push]
+[git-push]: https://help.github.com/articles/pushing-to-a-remote/
 
-        $ git push
+        $ git push <REMOTENAME> <BRANCHNAME> 
+        ex: git push
+        ex: git push origin master
+
+
+        
