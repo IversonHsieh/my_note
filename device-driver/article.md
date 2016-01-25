@@ -2,9 +2,20 @@ Record articles
 ---------------------------------------
 #### Kernel APIs man page
 
+- [Documentation extracted from the Linux kernel][kall]
+[kall]: https://www.kernel.org/doc/
+
+- [https://www.kernel.org/doc/Documentation/][kdoc] - describe kernel components
+[kdoc]: https://www.kernel.org/doc/Documentation/
+
+- [Linux Kernel HTML Documentation][khtml] - describe kernel APIs
+[khtml]: https://www.kernel.org/doc/htmldocs/
+
 - [Man Page] [mp]
 [mp]: http://rz2.com/
 
+- [linux kernel map][kmap]
+[kmap]: http://www.makelinux.net/kernel_map/
 
 #### Open a file in the kernel
 
