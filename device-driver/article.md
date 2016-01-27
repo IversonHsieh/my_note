@@ -12,7 +12,7 @@ Record articles
 [khtml]: https://www.kernel.org/doc/htmldocs/
 
 - [Man Page] [mp]
-[mp]: http://rz2.com/
+[mp]: https://www.kernel.org/doc/man-pages/
 
 - [linux kernel map][kmap]
 [kmap]: http://www.makelinux.net/kernel_map/
