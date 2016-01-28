@@ -14,8 +14,13 @@ Record articles
 - [Man Page] [mp]
 [mp]: https://www.kernel.org/doc/man-pages/
 
+#### User library
+
 - [linux kernel map][kmap]
 [kmap]: http://www.makelinux.net/kernel_map/
+
+- linux libraries - [Beyond Linux From Scratch][llib]
+[llib]: http://www.linuxfromscratch.org/blfs/view/svn/index.html
 
 #### Open a file in the kernel
 
