@@ -1,18 +1,14 @@
 Record netlink information
 ------------------------------------------
-#### See netlink info
+#### See netlink info - [netlink(3), netlink(7)][man-page]
+[man-page]: https://www.kernel.org/doc/man-pages/
 
-	$ man netlink
-	$ man -s7 netlink
+#### [Netlink Protocol Library Suite (libnl)][libnl-web]
+[libnl-web]: https://www.infradead.org/~tgr/libnl/
 
-#### See msghdr anciliary data
+#### See msghdr anciliary data, [cmsg(3)][man-page]
 
-	$ man cmsg
-
-#### 
-
-	$ man -s7 netlink
-
+#### struct sockaddr_nl in netlink(7)
 
 	struct sockaddr_nl {
 	   sa_family_t     nl_family;  /* AF_NETLINK */
@@ -21,11 +17,7 @@ Record netlink information
 	   __u32           nl_groups;  /* Multicast groups mask. */
 	};
 
-
-#### struct msghdr, struct cmsghdr
-
-	$ man recvmsg
-
+#### struct msghdr, struct cmsghdr in recvmsg(3)
 
 	struct msghdr {
 	   void         *msg_name;       /* optional address */
@@ -44,4 +36,15 @@ Record netlink information
 	/* followed by
 	   unsigned char cmsg_data[]; */
 	};
+
+#### struct nlmsghdr in netlink(7)
+
+	struct nlmsghdr {
+	   __u32 nlmsg_len;    /* Length of message including header. */
+	   __u16 nlmsg_type;   /* Type of message content. */
+	   __u16 nlmsg_flags;  /* Additional flags. */
+	   __u32 nlmsg_seq;    /* Sequence number. */
+	   __u32 nlmsg_pid;    /* Sender port ID. */
+	};
+
 
