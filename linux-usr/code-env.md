@@ -18,7 +18,6 @@ Record Linux Environment Configuration
 	ex : find -L `pwd` -iname "*.c" -o -iname "*.h" > cscope.files
 	ex : find -L /usr/src/linux-headers-3.19.0-15-generic/ -iname '*.h' -exec realpath {} \; >> cscope.files
 
-
 	$ cscope -Rbq
 	$ cscope
 
@@ -28,6 +27,19 @@ Use `CTRL+D` to quit cscope.
 
 #### ctags command:
 
-	$ ctags -R --exclude=.gt	
+	$ ctags -R . /usr/src/linux-headers-3.19.0-15-generic/include/ --exclude=.git
+
+#### taglist command:
+
+donwload taglist and install to vim
+
+	$ wget -O taglist.zip http://vim.sourceforge.net/scripts/download_script.php?src_id=19574
+	$ unzip taglist.zip
+	$ cp -a doc/ ~/.vim
+	$ cp -a plugin/ ~/.vim
+
+add mapping `map <f9> :Tlist<CR>` to .vimrc
+
+	$ vim ~/.vimrc
 
 
