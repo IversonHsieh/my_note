@@ -90,15 +90,20 @@ Record netlink information
 	     struct list_head        ops_list;
 	};
 
-	struct genl_info
-	{
-	   u32                     snd_seq;
-	   u32                     snd_pid;
-	   struct nlmsghdr *       nlhdr;
-	   struct genlmsghdr *     genlhdr;
-	   void *                  userhdr;
-	   struct nlattr **        attrs;
+	struct genl_info {
+	    u32         		snd_seq;
+	    u32         		snd_portid;
+	    struct nlmsghdr 	*nlhdr;
+	    struct genlmsghdr 	*genlhdr;
+	    void 				*userhdr;
+	    struct nlattr 		**attrs;
+	#ifdef CONFIG_NET_NS
+    	struct net 			*_net;
+	#endif
+    	void 				*user_ptr[2];
+    	struct sock 		*dst_sk;
 	};
+
 
 	struct nla_policy
 	{

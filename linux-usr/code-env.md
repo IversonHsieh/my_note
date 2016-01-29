@@ -43,4 +43,6 @@ add mapping `map <f9> :Tlist<CR>` to .vimrc
 
 	$ vim ~/.vimrc
 
+modify taglist window size `let Tlist_WinWidth = somenumber` to .vimrc
+
 
