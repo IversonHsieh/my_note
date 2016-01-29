@@ -106,3 +106,13 @@ Record netlink information
 	   u16             len;
 	};	
 
+#### struct genlmsghdr,
+
+	struct genlmsghdr {
+	    __u8    cmd;
+	    __u8    version;
+	    __u16   reserved;
+	};
+
+
+
