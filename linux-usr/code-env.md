@@ -15,14 +15,19 @@ Record Linux Environment Configuration
 
 	$ find [path] -name '*.h' -o -name '*.c' -o -name '*.cpp' > cscope.files
 	$ find [path] -name '*.h' -o -name '*.c' -o -name '*.cpp' >> cscope.files
+	ex : find -L `pwd` -iname "*.c" -o -iname "*.h" > cscope.files
+	ex : find -L /usr/src/linux-headers-3.19.0-15-generic/ -iname '*.h' -exec realpath {} \; >> cscope.files
+
+
 	$ cscope -Rbq
 	$ cscope
 
 Use `TAB` to jump to search area.
+
 Use `CTRL+D` to quit cscope.
 
 #### ctags command:
 
-	$ ctags -R --exclude=.git	
+	$ ctags -R --exclude=.gt	
 
 
