@@ -59,6 +59,11 @@ Record netlink information
 [genl-ker]: http://www.linuxfoundation.org/collaborate/workgroups/networking/generic_netlink_howto
 
 
+#### Sample code
+
+	- [genl kernel module and user application without libnl][s1]
+[s1]: http://www.electronicsfaq.com/2014/02/generic-netlink-sockets-example-code.html
+
 #### struct gen_family, genl_ops, genl_info, nla_policy
 
 	struct genl_family
