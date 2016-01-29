@@ -11,13 +11,13 @@ Record articles
 - [Linux Kernel HTML Documentation][khtml] - describe kernel APIs
 [khtml]: https://www.kernel.org/doc/htmldocs/
 
-- [Man Page] [mp]
-[mp]: https://www.kernel.org/doc/man-pages/
+- [linux kernel map][kmap]
+[kmap]: http://www.makelinux.net/kernel_map/
 
 #### User library
 
-- [linux kernel map][kmap]
-[kmap]: http://www.makelinux.net/kernel_map/
+- [Man Page] [mp]
+[mp]: https://www.kernel.org/doc/man-pages/
 
 - linux libraries - [Beyond Linux From Scratch][llib]
 [llib]: http://www.linuxfromscratch.org/blfs/view/svn/index.html
