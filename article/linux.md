@@ -14,6 +14,11 @@ Record articles
 - [linux kernel map][kmap]
 [kmap]: http://www.makelinux.net/kernel_map/
 
+#### Kernel module
+
+- [Write a first kernel module in Ubuntu][km]
+[km]: http://www.jerrynest.com/how-to-write-a-linux-kernel-module/
+
 #### User library
 
 - [Man Page] [mp]
