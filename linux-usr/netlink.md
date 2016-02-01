@@ -1,20 +1,22 @@
 Record netlink information
 ------------------------------------------
+#### Documents
+
 ##### See netlink info - [netlink(3), netlink(7)][man-page]
 [man-page]: https://www.kernel.org/doc/man-pages/
 
 ##### [Netlink Protocol Library Suite (libnl)][libnl-web]
 [libnl-web]: https://www.infradead.org/~tgr/libnl/
 
-##### Sample Code
+##### See msghdr anciliary data, [cmsg(3)][man-page]
+
+#### netlink sample Code
 
 - [sample1][s1]
 [s1]: http://linux-development-for-fresher.blogspot.tw/2012/05/understanding-netlink-socket.html
 - [sample2][s2]
 [s2]: http://1984.lsi.us.es/projects/netlink-examples/
-	
 
-##### See msghdr anciliary data, [cmsg(3)][man-page]
 
 ##### struct sockaddr_nl in netlink(7)
 
@@ -45,21 +47,11 @@ Record netlink information
 	   unsigned char cmsg_data[]; */
 	};
 
-##### struct nlmsghdr in netlink(7)
-
-	struct nlmsghdr {
-	   __u32 nlmsg_len;    /* Length of message including header. */
-	   __u16 nlmsg_type;   /* Type of message content. */
-	   __u16 nlmsg_flags;  /* Additional flags. */
-	   __u32 nlmsg_seq;    /* Sequence number. */
-	   __u32 nlmsg_pid;    /* Sender port ID. */
-	};
-
 ##### [generic netlink kernel document][genl-ker]
 [genl-ker]: http://www.linuxfoundation.org/collaborate/workgroups/networking/generic_netlink_howto
 
 
-##### Sample code
+#### Generic netlink sample code
 
 - [genl kernel module and user application without libnl][s1]
 [s1]: http://www.electronicsfaq.com/2014/02/generic-netlink-sockets-example-code.html
@@ -104,20 +96,64 @@ Record netlink information
     	struct sock 		*dst_sk;
 	};
 
-
 	struct nla_policy
 	{
 	   u16             type;
 	   u16             len;
 	};	
 
-##### struct genlmsghdr,
+#### Netlink user sample code
 
+##### struct sockaddr_nl, nlmsghdr 
+
+	struct sockaddr_nl {
+	    __kernel_sa_family_t	nl_family;  /* AF_NETLINK   */
+	    unsigned short  		nl_pad;     /* zero     */
+	    __u32       			nl_pid;     /* port ID  */
+		__u32       			nl_groups;  /* multicast groups mask */
+	};
+
+	 0                   1                   2                   3
+	 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+	|                Netlink message header (nlmsghdr)              |
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+	|           Generic Netlink message header (genlmsghdr)         |
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+	|             Optional user specific message header (nlattr)    |
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+	|           Optional Generic Netlink message payload            |
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+
+/include/linux/genetlink.h  
 	struct genlmsghdr {
 	    __u8    cmd;
 	    __u8    version;
 	    __u16   reserved;
 	};
 
+/include/linux/netlink.h  
+	struct nlmsghdr {
+	   __u32 nlmsg_len;    /* Length of message including header. */
+	   __u16 nlmsg_type;   /* Type of message content. */
+	   __u16 nlmsg_flags;  /* Additional flags. */
+	   __u32 nlmsg_seq;    /* Sequence number. */
+	   __u32 nlmsg_pid;    /* Sender port ID. */
+	};
+
+	/*
+	 *  <------- NLA_HDRLEN ------> <-- NLA_ALIGN(payload)-->
+	 * +---------------------+- - -+- - - - - - - - - -+- - -+
+	 * |        Header       | Pad |     Payload       | Pad |
+	 * |   (struct nlattr)   | ing |                   | ing |
+	 * +---------------------+- - -+- - - - - - - - - -+- - -+
+	 *  <-------------- nlattr->nla_len -------------->
+	 */
+	
+	struct nlattr {
+	    __u16           nla_len;
+	    __u16           nla_type;
+	};
 
 
