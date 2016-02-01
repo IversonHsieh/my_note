@@ -126,14 +126,16 @@ Record netlink information
 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 
-/include/linux/genetlink.h  
+/include/linux/genetlink.h
+
 	struct genlmsghdr {
 	    __u8    cmd;
 	    __u8    version;
 	    __u16   reserved;
 	};
 
-/include/linux/netlink.h  
+/include/linux/netlink.h
+
 	struct nlmsghdr {
 	   __u32 nlmsg_len;    /* Length of message including header. */
 	   __u16 nlmsg_type;   /* Type of message content. */
