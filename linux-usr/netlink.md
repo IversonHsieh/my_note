@@ -82,6 +82,10 @@ Record netlink information
 	     struct list_head        ops_list;
 	};
 
+	struct genl_multicast_group {
+	    char            name[GENL_NAMSIZ];
+	};
+
 	struct genl_info {
 	    u32         		snd_seq;
 	    u32         		snd_portid;
@@ -125,15 +129,6 @@ Record netlink information
 	|           Optional Generic Netlink message payload            |
 	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-
-/include/linux/genetlink.h
-
-	struct genlmsghdr {
-	    __u8    cmd;
-	    __u8    version;
-	    __u16   reserved;
-	};
-
 /include/linux/netlink.h
 
 	struct nlmsghdr {
@@ -142,6 +137,14 @@ Record netlink information
 	   __u16 nlmsg_flags;  /* Additional flags. */
 	   __u32 nlmsg_seq;    /* Sequence number. */
 	   __u32 nlmsg_pid;    /* Sender port ID. */
+	};
+
+/include/linux/genetlink.h
+
+	struct genlmsghdr {
+	    __u8    cmd;
+	    __u8    version;
+	    __u16   reserved;
 	};
 
 	/*
