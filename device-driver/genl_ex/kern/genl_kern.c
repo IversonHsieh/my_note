@@ -114,7 +114,7 @@ out:
 	return 0;
 }
 
-//Commands: mapping between the command enumeration and the actual function
+/* Commands: mapping between the command enumeration and the actual function */
 struct genl_ops doc_exmpl_gnl_ops_echo[DOC_EXMPL_C_MAX] = {
 	{
 	.cmd = DOC_EXMPL_C_ECHO,
