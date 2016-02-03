@@ -1,18 +1,20 @@
 Record Linux Environment Configuration
 --------------------------------------------
-#### Vim
+##### Vim
 	
 - [vim-color-scheme][vimco]
 [vimco]: http://monster-log.blogspot.tw/2010/12/vim-color-scheme-test.html)
 	
 
-#### ctags/cscope
+##### ctags/cscope
 
 - [cscope-tuition](http://hamisme.blogspot.tw/2011/02/cscope.html)
 - [cscope-ctags-tuition](http://angledark0123.pixnet.net/blog/post/51919594-vim%E9%99%84%E4%BB%B6%EF%BC%9Acscope%2Bctag-%E4%BD%BF%E7%94%A8%E7%AD%86%E8%A8%98)
 - [taglist-tuitiion](http://nelsonchunglife.blogspot.tw/2011/06/ubuntuvim-plugin-ctagstaglist.html)
 
-#### cscope command:
+##### cscope command:
+
+Include database automatically - `cs add .` to `~/.vimrc` 
 
 	$ find [path] -name '*.h' -o -name '*.c' -o -name '*.cpp' > cscope.files
 	$ find [path] -name '*.h' -o -name '*.c' -o -name '*.cpp' >> cscope.files
@@ -22,15 +24,14 @@ Record Linux Environment Configuration
 	$ cscope -Rbq
 	$ cscope
 
-Use `TAB` to jump to search area.
-
+Use `TAB` to jump to search area.  
 Use `CTRL+D` to quit cscope.
 
-#### ctags command:
+##### ctags command:
 
 	$ ctags -R . /usr/src/linux-headers-3.19.0-15-generic/include/ --exclude=.git
 
-#### taglist command:
+##### taglist command:
 
 donwload taglist and install to vim
 
@@ -39,10 +40,21 @@ donwload taglist and install to vim
 	$ cp -a doc/ ~/.vim
 	$ cp -a plugin/ ~/.vim
 
-add mapping `map <f9> :Tlist<CR>` to .vimrc
-
-	$ vim ~/.vimrc
-
+add mapping `map <f9> :Tlist<CR>` to .vimrc  
 modify taglist window size `let Tlist_WinWidth = somenumber` to .vimrc
+
+##### vim command:
+
+Switch tab  
+- next tab page - `gt`
+- prev tab page - `gT`
+- go to tab page {count} - `{count}gt`
+
+
+
+
+
+
+
 
 
