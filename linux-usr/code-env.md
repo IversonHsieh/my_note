@@ -11,6 +11,7 @@ Record Linux Environment Configuration
 - [cscope-tuition](http://hamisme.blogspot.tw/2011/02/cscope.html)
 - [cscope-ctags-tuition](http://angledark0123.pixnet.net/blog/post/51919594-vim%E9%99%84%E4%BB%B6%EF%BC%9Acscope%2Bctag-%E4%BD%BF%E7%94%A8%E7%AD%86%E8%A8%98)
 - [taglist-tuitiion](http://nelsonchunglife.blogspot.tw/2011/06/ubuntuvim-plugin-ctagstaglist.html)
+- [screen-tuitiion](http://blogger.gtwang.org/2013/11/screen-command-examples-to-manage-linux-terminals.html)
 
 ##### cscope command:
 
@@ -77,11 +78,19 @@ Switch tab
 - prev tab page - `gT`
 - go to tab page {count} - `{count}gt`
 
-Highlight multiword in vim command - `/\vword1|word2|word3` or `/word1\|word2\|word3`
+Highlight multiword in vim command - `/\vword1|word2|word3` or `/word1\|word2\|word3`  
+Adjust window size - `set mouse=a` and `set ttymouse=xterm2` to `~/.vimrc`
 
+##### screen command:
 
-
-
+	# Create a screean
+	$ screen -S [name]
+	# See all screen task
+	$ screen -ls
+	# Detach a screen [CTRL+a][d]
+	$ screen -d [pid]
+	# Attach a screen
+	$ screen -r [pid]
 
 
 
