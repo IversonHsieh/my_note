@@ -58,16 +58,59 @@ Record netlink information
 
 ##### struct gen_family, genl_ops, genl_info, nla_policy
 
-	struct genl_family
-	{
-	     unsigned int            id;
-	     unsigned int            hdrsize;
-	     char                    name[GENL_NAMSIZ];
-	     unsigned int            version;
-	     unsigned int            maxattr;
-	     struct nlattr **        attrbuf;
-	     struct list_head        ops_list;
-	     struct list_head        family_list;
+	/**
+	 * struct genl_family - generic netlink family
+	 * @id: protocol family idenfitier
+	 * @hdrsize: length of user specific header in bytes
+	 * @name: name of family
+	 * @version: protocol version
+	 * @maxattr: maximum number of attributes supported
+	 * @netnsok: set to true if the family can handle network
+	 *  namespaces and should be presented in all of them
+	 * @parallel_ops: operations can be called in parallel and aren't
+	 *  synchronized by the core genetlink code
+	 * @pre_doit: called before an operation's doit callback, it may
+	 *  do additional, common, filtering and return an error
+	 * @post_doit: called after an operation's doit callback, it may
+	 *  undo operations done by pre_doit, for example release locks
+	 * @mcast_bind: a socket bound to the given multicast group (which
+	 *  is given as the offset into the groups array)
+	 * @mcast_unbind: a socket was unbound from the given multicast group.
+	 *  Note that unbind() will not be called symmetrically if the
+	 *  generic netlink family is removed while there are still open
+	 *  sockets.
+	 * @attrbuf: buffer to store parsed attributes
+	 * @family_list: family list
+	 * @mcgrps: multicast groups used by this family (private)
+	 * @n_mcgrps: number of multicast groups (private)
+	 * @mcgrp_offset: starting number of multicast group IDs in this family
+	 * @ops: the operations supported by this family (private)
+	 * @n_ops: number of operations supported by this family (private)
+	 */
+	struct genl_family {
+	    unsigned int        id;
+	    unsigned int        hdrsize;
+	    char            name[GENL_NAMSIZ];
+	    unsigned int        version;
+	    unsigned int        maxattr;
+	    bool            netnsok;
+	    bool            parallel_ops;
+	    int         (*pre_doit)(const struct genl_ops *ops,
+	                        struct sk_buff *skb,
+	                        struct genl_info *info);
+	    void            (*post_doit)(const struct genl_ops *ops,
+	                         struct sk_buff *skb,
+	                         struct genl_info *info);
+	    int         (*mcast_bind)(struct net *net, int group);
+	    void            (*mcast_unbind)(struct net *net, int group);
+	    struct nlattr **    attrbuf;    /* private */
+	    const struct genl_ops * ops;        /* private */
+	    const struct genl_multicast_group *mcgrps; /* private */
+	    unsigned int        n_ops;      /* private */
+	    unsigned int        n_mcgrps;   /* private */
+	    unsigned int        mcgrp_offset;   /* private */
+	    struct list_head    family_list;    /* private */
+	    struct module       *module;
 	};
 	
 	struct genl_ops
