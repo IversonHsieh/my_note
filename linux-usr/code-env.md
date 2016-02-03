@@ -26,10 +26,25 @@ Include database automatically - `cs add .` to `~/.vimrc`
 
 Use `TAB` to jump to search area.  
 Use `CTRL+D` to quit cscope.
+Use [cscopequickfix](http://stackoverflow.com/questions/28185067/vim-go-to-next-search-result-across-multiple-files), add below to `~/.vimrc`
+
+	set cscopequickfix=s-,c-,d-,i-,t-,e-
+	augroup qf
+	    autocmd!
+	    autocmd QuickFixCmdPost * cwindow
+	augroup END
+
+`tab cs f s` is abnormal when we use cscopequickfix so use `:tabnew [filename]` to tab a file.
 
 ##### ctags command:
 
 	$ ctags -R . /usr/src/linux-headers-3.19.0-15-generic/include/ --exclude=.git
+
+[Open a new tab and vertical split][ctags_tab], add below to `~/.vim`
+[ctags_tab]: http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
+
+	map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+	map <C-v> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 ##### taglist command:
 
@@ -45,12 +60,24 @@ modify taglist window size `let Tlist_WinWidth = somenumber` to .vimrc
 
 ##### vim command:
 
+vim environemnt, add to `~\.vimrc`
+
+	"vim screen
+	syntax on
+	set t_Co=256
+	set number
+	set hlsearch!
+	colorscheme candy
+	"set expandtab
+	set tabstop=4
+	set shiftwidth=4
+
 Switch tab  
 - next tab page - `gt`
 - prev tab page - `gT`
 - go to tab page {count} - `{count}gt`
 
-
+Highlight multiword in vim command - `/\vword1|word2|word3` or `/word1\|word2\|word3`
 
 
 
