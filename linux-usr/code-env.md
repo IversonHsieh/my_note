@@ -37,6 +37,17 @@ Use [cscopequickfix](http://stackoverflow.com/questions/28185067/vim-go-to-next-
 
 `tab cs f s` is abnormal when we use cscopequickfix so use `:tabnew [filename]` to tab a file.
 
+[Cscope key map](http://cscope.sourceforge.net/cscope_maps.vim)
+
+	nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
 ##### ctags command:
 
 	$ ctags -R . /usr/src/linux-headers-3.19.0-15-generic/include/ --exclude=.git
@@ -44,7 +55,7 @@ Use [cscopequickfix](http://stackoverflow.com/questions/28185067/vim-go-to-next-
 [Open a new tab and vertical split][ctags_tab], add below to `~/.vim`
 [ctags_tab]: http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 
-	map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+	map <C-t> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 	map <C-v> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 ##### taglist command:
