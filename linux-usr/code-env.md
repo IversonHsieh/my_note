@@ -80,6 +80,7 @@ Switch tab
 
 Highlight multiword in vim command - `/\vword1|word2|word3` or `/word1\|word2\|word3`  
 Adjust window size - `set mouse=a` and `set ttymouse=xterm2` to `~/.vimrc`
+Disable adjusting window size - `set mouse=""`
 
 ##### screen command:
 

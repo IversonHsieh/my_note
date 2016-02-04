@@ -190,6 +190,7 @@ static int __init hello_init(void)
         initialize_timer();
 
         pr_info("Hello module registered.\n");
+		pr_info("NLMSG_GOODSIZE = %d.\n", NLMSG_GOODSIZE);
         return 0;
 }
 

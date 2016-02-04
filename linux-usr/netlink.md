@@ -1,16 +1,19 @@
 Record netlink information
 ------------------------------------------
-#### Documents
+##### Documents
 
-##### See netlink info - [netlink(3), netlink(7)][man-page]
+###### See netlink info - [netlink(3), netlink(7)][man-page]
 [man-page]: https://www.kernel.org/doc/man-pages/
 
-##### [Netlink Protocol Library Suite (libnl)][libnl-web]
+###### [Linux Journal - Kernel Korner - Why and How to Use Netlink Socket][lxjn]
+[lxjn]: http://www.linuxjournal.com/article/7356
+
+###### [Netlink Protocol Library Suite (libnl)][libnl-web]
 [libnl-web]: https://www.infradead.org/~tgr/libnl/
 
-##### See msghdr anciliary data, [cmsg(3)][man-page]
+###### See msghdr anciliary data, [cmsg(3)][man-page]
 
-#### netlink sample Code
+##### netlink sample Code
 
 - [generic netlink unicast][s1]
 [s1]: http://linux-development-for-fresher.blogspot.tw/2012/05/understanding-netlink-socket.html
@@ -19,7 +22,7 @@ Record netlink information
 - [sample][s3]
 [s3]: http://1984.lsi.us.es/projects/netlink-examples/
 
-##### struct sockaddr_nl in netlink(7)
+###### struct sockaddr_nl in netlink(7)
 
 	struct sockaddr_nl {
 	   sa_family_t     nl_family;  /* AF_NETLINK */
@@ -28,7 +31,7 @@ Record netlink information
 	   __u32           nl_groups;  /* Multicast groups mask. */
 	};
 
-##### struct msghdr, struct cmsghdr in recvmsg(3)
+###### struct msghdr, struct cmsghdr in recvmsg(3)
 
 	struct msghdr {
 	   void         *msg_name;       /* optional address */
@@ -48,16 +51,16 @@ Record netlink information
 	   unsigned char cmsg_data[]; */
 	};
 
-##### [generic netlink kernel document][genl-ker]
+###### [generic netlink kernel document][genl-ker]
 [genl-ker]: http://www.linuxfoundation.org/collaborate/workgroups/networking/generic_netlink_howto
 
 
-#### Generic netlink sample code
+##### Generic netlink sample code
 
 - [genl kernel module and user application without libnl][s1]
 [s1]: http://www.electronicsfaq.com/2014/02/generic-netlink-sockets-example-code.html
 
-##### struct gen_family, genl_ops, genl_info, nla_policy
+###### struct gen_family, genl_ops, genl_info, nla_policy
 
 	/**
 	 * struct genl_family - generic netlink family
@@ -150,9 +153,9 @@ Record netlink information
 	   u16             len;
 	};	
 
-#### Netlink user sample code
+##### Netlink user sample code
 
-##### struct sockaddr_nl, nlmsghdr 
+###### struct sockaddr_nl, nlmsghdr 
 
 	struct sockaddr_nl {
 	    __kernel_sa_family_t	nl_family;  /* AF_NETLINK   */

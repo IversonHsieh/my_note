@@ -1,3 +1,10 @@
 cscope*
 tags
 *.swp
+*.cmd
+*.symvers
+*.ko
+*.mod.c
+*.o
+*.order
+.tmp_versions
