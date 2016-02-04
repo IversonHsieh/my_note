@@ -12,11 +12,12 @@ Record netlink information
 
 #### netlink sample Code
 
-- [sample1][s1]
+- [generic netlink unicast][s1]
 [s1]: http://linux-development-for-fresher.blogspot.tw/2012/05/understanding-netlink-socket.html
-- [sample2][s2]
-[s2]: http://1984.lsi.us.es/projects/netlink-examples/
-
+- [generic netlink multicast][s2]
+[s2]: http://stackoverflow.com/questions/26265453/netlink-multicast-kernel-group/33578010#33578010
+- [sample][s3]
+[s3]: http://1984.lsi.us.es/projects/netlink-examples/
 
 ##### struct sockaddr_nl in netlink(7)
 
