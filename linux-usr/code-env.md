@@ -50,6 +50,9 @@ Use [cscopequickfix](http://stackoverflow.com/questions/28185067/vim-go-to-next-
 
 ##### ctags command:
 
+	# Add file list
+	$ ctags -R -L cscope.files
+	# Add folders specified in command line
 	$ ctags -R . /usr/src/linux-headers-3.19.0-15-generic/include/ --exclude=.git
 
 [Open a new tab and vertical split][ctags_tab], add below to `~/.vim`
