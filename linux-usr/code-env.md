@@ -93,8 +93,13 @@ Switch tab
 - go to tab page {count} - `{count}gt`
 
 Highlight multiword in vim command - `/\vword1|word2|word3` or `/word1\|word2\|word3`  
-Adjust window size - `set mouse=a` and `set ttymouse=xterm2` to `~/.vimrc`
+Adjust window size - `set mouse=a` and `set ttymouse=xterm2` to `~/.vimrc`  
 Disable adjusting window size - `set mouse=""`
+In visual mode, Once you have selected the text you want, you can use all sorts of commands on them. Some of the more useful ones are:  
+- `d`elete the text
+- `y`ank (copy) the text
+- `p`aste your clipboard onto the text, replacing it
+- `y``q``/``p` search for the text elsewhere in your document
 
 ##### screen command:
 
