@@ -86,6 +86,12 @@ vim environemnt, add to `~\.vimrc`
 	"set expandtab
 	set tabstop=4
 	set shiftwidth=4
+	set splitright
+	set splitbelow
+
+Basic Op  
+- redo : `Ctrl+R`
+- undo : `u`
 
 Switch tab  
 - next tab page - `gt`
@@ -100,6 +106,9 @@ In visual mode, Once you have selected the text you want, you can use all sorts 
 - `y`ank (copy) the text
 - `p`aste your clipboard onto the text, replacing it
 - `y``q``/``p` search for the text elsewhere in your document
+
+[Visual blcok mode](http://stackoverflow.com/questions/1676632/whats-a-quick-way-to-comment-uncomment-lines-in-vim/15588798#15588798)
+
 
 ##### screen command:
 
