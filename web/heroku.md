@@ -3,19 +3,19 @@
 
 ##### Start a console
 
-Launch a REPL process for experimenting in your app's environment:  
+Launch a REPL process for experimenting in your app's environment:
 ```sh
 $ heroku run node
 ```
 
-For example, you will be able to run the following:  
+For example, you will be able to run the following:
 ```javascript
 > var cool = require('cool-ascii-faces')
 > cool()
 ( ⚆ _ ⚆ )
 ```
 
-run the `bash` command  
+run the `bash` command
 ```sh
 $ heroku run bash
 ```
