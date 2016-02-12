@@ -1,6 +1,23 @@
 #### Record heroku usage
 - [Getting Started - nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
+##### Scale the app
+
+Check how many dynos are running using the `ps` command:  
+```sh
+$ heroku ps
+=== web (Free): node index.js (1)
+web.1: idle 2016/02/12 09:14:56 +0800 (~ 2h ago)
+```
+
+Scale the number of web dynos
+```sh
+$ heroku ps:scale web=0
+```
+```sh
+$ heroku ps:scale web=1
+```
+
 ##### Start a console
 
 Launch a REPL process for experimenting in your app's environment:
