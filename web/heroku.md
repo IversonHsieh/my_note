@@ -25,6 +25,13 @@ $ heroku ps:scale web=0
 $ heroku ps:scale web=1
 ```
 
+##### Run the app locally
+```sh
+$ heroku local web
+# However, in my ubuntu, I install nodejs-0.10.25 and no node command. I can use the command to test in local
+$ nodejs index.js
+```
+
 ##### Start a console
 
 Launch a REPL process for experimenting in your app's environment:
