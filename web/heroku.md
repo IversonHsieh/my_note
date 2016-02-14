@@ -1,6 +1,13 @@
 #### Record heroku usage
 - [Getting Started - nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
+##### Depoly the app
+
+Get heroku URL  
+```sh
+$ heroku open
+```
+
 ##### Scale the app
 
 Check how many dynos are running using the `ps` command:  
