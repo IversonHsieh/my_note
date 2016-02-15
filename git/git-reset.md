@@ -21,7 +21,8 @@ $ git reset --soft HEAD~1
 $ git reset HEAD@{1}
 $ git reset [your hash number]
 ```
-[git-undo]: http://stackoverflow.com/questions/2510276/undoing-git-reset
+
+[git-undo](http://stackoverflow.com/questions/2510276/undoing-git-reset)
 
 `git reset --mixed` - 
 
