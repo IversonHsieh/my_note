@@ -6,3 +6,5 @@ Have a good day.
 
 Test git push.
 
+@include article/linux.md
+
