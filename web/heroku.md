@@ -1,14 +1,29 @@
-#### Record heroku usage
+### Record heroku usage
 - [Getting Started - nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 
-##### Depoly the app
+#### Depoly the app
+
+Update a app
+```sh
+$ git add .
+$ git commit "your script"
+$ git push heroku master
+```
 
 Get heroku URL  
 ```sh
 $ heroku open
+xdg-open: no method available for opening 'https://murmuring-reaches-87158.herokuapp.com/'
+done
+```
+#### Scale the app
+
+view the log of heroku server in local
+```sh
+$ heroku logs --tail
 ```
 
-##### Scale the app
+#### Scale the app
 
 Check how many dynos are running using the `ps` command:  
 ```sh
@@ -25,14 +40,14 @@ $ heroku ps:scale web=0
 $ heroku ps:scale web=1
 ```
 
-##### Run the app locally
+#### Run the app locally
 ```sh
 $ heroku local web
 # However, in my ubuntu, I install nodejs-0.10.25 and no node command. I can use the command to test in local
 $ nodejs index.js
 ```
 
-##### Start a console
+#### Start a console
 
 Launch a REPL process for experimenting in your app's environment:
 ```sh
