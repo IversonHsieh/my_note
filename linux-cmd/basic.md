@@ -48,6 +48,28 @@ Check Dependencies for Specific Packages
 $ apt-cache showpkg nodejs
 ```
 
+Folder installed by apt-get install
+```sh
+$ dpkg -L linux-source-3.19.0
+```
+
+#### compress and uncompress ###
+
+.tar.bz2
+```sh
+# compress
+$ tar jcvf FileName.tar.bz2 DirName
+# uncompress
+$ tar jxvf FileName.tar.bz2
+````
+
+.tar.gz
+```sh
+# compress
+$ tar zcvf FileName.tar.gz DirName
+# uncompress
+$ tar zxvf FileName.tar.gz
+```
 
 ##### [Modify dhcp client to static ip](http://askubuntu.com/questions/470237/assigning-a-static-ip-to-ubuntu-server-14-04-lts)
 
