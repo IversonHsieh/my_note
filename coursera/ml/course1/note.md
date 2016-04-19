@@ -5,8 +5,9 @@ Record ML information
 - [Where should my files go?](https://www.coursera.org/learn/ml-foundations/supplement/IT04V/reading-where-should-my-files-go)
 
 ##### GraphLab Create
-- [GraphLab Create API](https://dato.com/products/create/docs/graphlab.data_structures.html)
 - [Install GraphLab Create](https://dato.com/download/install-graphlab-create.html)
-
-
+- [GraphLab Create User Guide](https://dato.com/learn/userguide/index.html)
+- [GraphLab Create API](https://dato.com/products/create/docs/graphlab.data_structures.html)
+- [GraphLab Create™ Translator](https://dato.com/learn/translator/)
+- [How-To](https://dato.com/learn/how-to/)
 
