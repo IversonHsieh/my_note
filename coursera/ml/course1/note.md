@@ -11,3 +11,10 @@ Record ML information
 - [GraphLab Create™ Translator](https://dato.com/learn/translator/)
 - [How-To](https://dato.com/learn/how-to/)
 
+#### iPython Notebook
+- [iPython Notebook ShortCuts](https://sowingseasons.com/blog/reference/2016/01/jupyter-keyboard-shortcuts/23298516)
+
+#### Metplotlib
+- [Metplotlib](http://matplotlib.org/)
+
+
