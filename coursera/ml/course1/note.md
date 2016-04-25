@@ -14,7 +14,17 @@ Record ML information
 #### iPython Notebook
 - [iPython Notebook ShortCuts](https://sowingseasons.com/blog/reference/2016/01/jupyter-keyboard-shortcuts/23298516)
 
+#### GraphLab Create API
+- graphlab.SFrame
+- graphlab.SArray
+- graphlab.SArray.apply
+
 #### Metplotlib
 - [Metplotlib](http://matplotlib.org/)
+
+#### python
+- [The Python Tutorial - Dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
+- [python overview](http://pydoing.blogspot.tw/2010/12/python-overview.html)
+
 
 
