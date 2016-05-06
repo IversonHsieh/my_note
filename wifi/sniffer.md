@@ -2,6 +2,7 @@ Omnipeek
 -------------------------------------------
 ##### Simple Usage
 - Make filter -> Type:Advance
+- Address Filter -> Single -> Type: Wireless Address
 - And -> Protocol -> Specific ProtoSpec
 
 Wireshark
