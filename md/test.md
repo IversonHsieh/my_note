@@ -52,3 +52,6 @@ This is a regular paragraph.
 </table>
 
 This is another regular paragraph.
+
+$$f(x) = x^2 - x^{1 \over \pi}$$
+

@@ -12,6 +12,8 @@ Record ML information
 - [How-To](https://dato.com/learn/how-to/)
 
 #### iPython Notebook
+- [Jupyter Introduction](http://nbviewer.jupyter.org/github/twistedhardware/mltutorial/blob/master/notebooks/jupyter/1.Introduction.ipynb)
+- [MarkDown & LaTeX](http://nbviewer.jupyter.org/github/twistedhardware/mltutorial/blob/master/notebooks/jupyter/2.%20Markdown%20%26%20LaTeX.ipynb)
 - [iPython Notebook ShortCuts](https://sowingseasons.com/blog/reference/2016/01/jupyter-keyboard-shortcuts/23298516)
 
 #### GraphLab Create API
