@@ -23,9 +23,6 @@ Record ML information
 - graphlab.SArray
 - graphlab.SArray.apply
 
-#### Metplotlib
-- [Metplotlib](http://matplotlib.org/)
-
 #### python
 - [The Python Tutorial - Dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
 - [python overview](http://pydoing.blogspot.tw/2010/12/python-overview.html)
