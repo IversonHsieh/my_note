@@ -20,6 +20,7 @@ Record ML information
 - [MarkDown & LaTeX](http://nbviewer.jupyter.org/github/twistedhardware/mltutorial/blob/master/notebooks/jupyter/2.%20Markdown%20%26%20LaTeX.ipynb)
 - [Python 3 - Jupyter Tutorial](http://nbviewer.jupyter.org/github/twistedhardware/mltutorial/blob/master/notebooks/jupyter/3.%20Python%20Basics.ipynb)
 - [iPython Notebook ShortCuts](https://sowingseasons.com/blog/reference/2016/01/jupyter-keyboard-shortcuts/23298516)
+- [Converting notebooks to other formats] (https://ipython.org/ipython-doc/1/interactive/nbconvert.html)
 
 #### GraphLab Create API
 - graphlab.SFrame
@@ -29,6 +30,5 @@ Record ML information
 #### python
 - [The Python Tutorial - Dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
 - [python overview](http://pydoing.blogspot.tw/2010/12/python-overview.html)
-
 
 
