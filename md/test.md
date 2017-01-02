@@ -56,6 +56,7 @@ This is another regular paragraph.
 $$f(x) = x^2 - x^{1 \over \pi}$$
 
 picture
+
 ![2017](../md/2017.jpg)
 
 
