@@ -28,7 +28,8 @@ Record ML information
 - graphlab.SArray.apply
 
 #### python
-- [The Python Tutorial - Dictionaries](https://docs.python.org/2/tutorial/datastructures.html#dictionaries)
+- [The Python Tutorial - Official Python Documentation, English](https://docs.python.org/2/tutorial/index.html)
+- [The Python Tutorial - Official Python Documentation, Tradition Chinese](https://docs.python.org.tw/3/tutorial/index.html)
 - [python overview](http://pydoing.blogspot.tw/2010/12/python-overview.html)
 
 
