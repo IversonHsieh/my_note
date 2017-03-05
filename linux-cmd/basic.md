@@ -48,9 +48,9 @@ Check Dependencies for Specific Packages
 $ apt-cache showpkg nodejs
 ```
 
-Folder installed by apt-get install
+list all installed packages
 ```sh
-$ dpkg -L linux-source-3.19.0
+$ apt list --installed
 ```
 
 #### compress and uncompress ###
