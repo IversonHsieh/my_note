@@ -1,5 +1,8 @@
 Git config operation
 -----------------------------
+- Change user name
+		$ git config --global user.name "crttcrttcrtt@gmail.com"
+
 - [Caching your GitHub password in Git][git-config_passwd]
 [git-config_passwd]: https://help.github.com/articles/caching-your-github-password-in-git/#platform-linux
 
