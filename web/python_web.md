@@ -43,18 +43,29 @@ $ source VENV/bin/activate
 #### Setup environment from git to new PC
 
 ```sh
-(VENV) $ git clone https://github.com/IversonHsieh/PythonWeb.git
+(VENV) $ git clone https://github.com/IversonHsieh/PythonWeb.git myweb
 (VENV) $ cd myweb
 (VENV) $ pip install -r 'requirements.txt'
 ```
 
+*****
+#### Run python web site
 
+```sh
+(VENV) $ python manage.py runserver 192.168.179.184:8000
+```
 
+*****
+#### Run apache web site
 
+```sh
+(VENV) $ sudo service apache2 restart
+```
 
+*****
+#### Google cloud console
 
-
-
+- ip : 104.199.209.106
 
 
 
