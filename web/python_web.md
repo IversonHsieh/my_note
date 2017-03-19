@@ -23,3 +23,47 @@ $ virtualenv VENV
 ```sh
 $ source VENV/bin/activate
 ```
+
+*****
+#### Install Django in virtual environment
+
+```sh
+(VENV) $ pip install django
+(VENV) $ django-admin startproject myweb
+```
+
+*****
+#### Freeze installed pip package
+
+```sh
+(VENV) $ pip freeze > requirements.txt
+```
+
+*****
+#### Setup environment from git to new PC
+
+```sh
+(VENV) $ git clone https://github.com/IversonHsieh/PythonWeb.git
+(VENV) $ cd myweb
+(VENV) $ pip install -r 'requirements.txt'
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
