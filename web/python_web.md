@@ -49,6 +49,15 @@ $ source VENV/bin/activate
 ```
 
 *****
+#### Install Markdown
+
+```sh
+$ pip install django-markdown-deux
+$ pip freeze > requirement.txt
+```
+
+
+*****
 #### Run python web site
 
 ```sh
